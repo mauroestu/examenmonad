@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pregunta 1 - CSS y Maquetación</title>
+</head>
+
+<style>
+  .wrapper
+  {
+      width: 100%;
+  }
+  .down
+  {
+    display: inline-block;
+  }
+</style>
+<body>
+
+  <div id="container" class="wrapper">
+  </div>
+
+<script type="text/javascript">
+
+let a = 1, b = 0, temp, strFigura = '';
+
+num = prompt('Ingrese un número.');
+
+for (let i = num; i > 0; i--){
+  temp = a;
+  a = a + b;
+  b = temp;
+  for(let j = 0; j < b; j++)
+  {
+      strFigura += '<p>[]</p>';
+  }
+
+  var parr = document.createElement("div");
+  parr.innerHTML = strFigura;
+  parr.className = 'down';
+  document.getElementById("container").appendChild(parr);
+  strFigura = '';
+}
+
+
+</script>
+
+</body>
+
+</html>
